@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Credit Card Fraud Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" style="font-weight: bolder">
+      Credit Card Fraud Detection
+    </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="columns">
+        <div class="column" style="margin-left: 5pt;">
+            <section class="section">
+                <h1 class="title">
+                    Transaction details:
+                </h1>
+                <form id="fraud-form" class="is-link" action="submit" method="post" enctype="multipart/form-data">
+                    <div class="field">
+                        <label class="label">Type</label>
+                        <div class="control">
+                            <input class="input" name="type" type="text" placeholder="PAYMENT, TRANSFER, CASH_OUT">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Amount</label>
+                        <div class="control">
+                            <input class="input" name="amount" type="text" placeholder="USD">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Origin Name</label>
+                        <div class="control">
+                            <input class="input" name="nameOrig" type="text" placeholder="synthetic">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Origin Old Balance</label>
+                        <div class="control">
+                            <input class="input" name="oldbalanceOrg" type="old" placeholder="(USD)">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Origin New Balance</label>
+                        <div class="control">
+                            <input class="input" name="newbalanceOrig" type="text" placeholder="(USD)">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Destination Name</label>
+                        <div class="control">
+                            <input class="input" name="nameDest" type="text" placeholder="synthetic">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Destination Old Balance</label>
+                        <div class="control">
+                            <input class="input" name="oldbalanceDest" type="old" placeholder="(USD)">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Destination New Balance</label>
+                        <div class="control">
+                            <input class="input" name="newbalanceDest" type="text" placeholder="(USD)">
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button class="button is-link">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <div class="column">
+            <section class="section">
+                <h1 class="title">
+                    {{msg}}
+                </h1>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
