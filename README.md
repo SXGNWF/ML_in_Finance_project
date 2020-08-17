@@ -1,2 +1,6 @@
-# ML_in_Finance_project
-COMS_W4995_Machine_Learning_with_Applications_in_Finance_Course_Project
+## Credit Card Fraud Detection
+
+This repository contains the code and presentation for the final project of COMS-W4995, Machine Learning in Finance.
+
+To run the Flask app locally, use `FLASK_APP=app.py flask run`.
+
